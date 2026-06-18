@@ -1,249 +1,485 @@
 <!DOCTYPE html>
 <html lang="es">
+    <link rel="stylesheet" href="style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M.Sc. Romel Percy Melgarejo Bolivar | Perfil Profesional y Académico</title>
+    <title>Renzo Tito Chura | Estadística e Informática</title>
+    <!-- Fuentes e iconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        :root {
-            --primary: #1e3a8a;
-            --secondary: #0284c7;
-            --dark: #1f2937;
-            --light: #f3f4f6;
-            --white: #ffffff;
-            --accent: #f59e0b;
-        }
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--dark);
-            background-color: var(--light);
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            color: #1f2937;
             line-height: 1.6;
+            padding: 2rem 1rem;
         }
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--white);
-            padding: 4rem 1rem;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto;
-        }
+
         .container {
-            max-width: 950px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        section {
-            background-color: var(--white);
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);
+            overflow: hidden;
             padding: 2rem;
-            margin-bottom: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        h2 {
-            color: var(--primary);
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 0.4rem;
-            margin-bottom: 1.2rem;
+
+        /* Header */
+        .header-banner {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .header-banner img {
+            max-width: 100%;
+            border-radius: 16px;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin: 0.5rem 0;
+        }
+        .typing-container {
+            background: #f3f4f6;
+            padding: 1rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+        .typed-text {
             font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c7a4d;
+        }
+        .subhead {
+            text-align: center;
+            font-weight: 500;
+            background: #eef2ff;
+            padding: 0.75rem;
+            border-radius: 40px;
+            margin: 1rem 0;
+        }
+        .badge-row {
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-        ul {
-            list-style-type: none;
-        }
-        li {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--secondary);
-            font-weight: bold;
-            font-size: 1.1rem;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin: 1.5rem 0;
         }
         .badge {
-            background-color: var(--light);
-            color: var(--primary);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
+            background: #e5e7eb;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
             font-size: 0.85rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 0.3rem;
+            font-weight: 500;
         }
-        .project-title {
-            font-weight: bold;
-            color: var(--dark);
+        .section-title {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            border-left: 5px solid #2c7a4d;
+            padding-left: 1rem;
         }
-        .btn-verify {
-            display: inline-flex;
-            align-items: center;
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 0.5rem 1rem;
+        .divider {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .divider img {
+            max-width: 100%;
+            height: auto;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        th, td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+        }
+        a {
+            color: #2c7a4d;
             text-decoration: none;
-            border-radius: 5px;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .shiny-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+        .shiny-btn {
+            background: #e6f7ec;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .shiny-btn:hover {
+            background: #c6e9d4;
+            transform: translateY(-2px);
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+        .skill-tag {
+            background: #eef2ff;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
             font-size: 0.85rem;
-            font-weight: bold;
-            margin-top: 0.5rem;
-            transition: background-color 0.3s;
-        }
-        .btn-verify:hover {
-            background-color: var(--secondary);
-        }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-        @media (max-width: 768px) {
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-            header h1 {
-                font-size: 2rem;
-            }
         }
         footer {
             text-align: center;
-            padding: 3rem 1rem;
-            font-size: 0.9rem;
-            color: #6b7280;
-            background-color: #e5e7eb;
             margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+            color: #4b5563;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .typed-text {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
+<div class="container">
+    <!-- Banner superior -->
+    <div class="header-banner">
+        <a href="https://github.com/renzotchss301-lgtm">
+            <img src="https://i.pinimg.com/originals/77/ca/a3/77caa32884d735d439ade45ba37feaf2.gif" alt="MasterHead" style="width: 100%; max-width: 900px;">
+        </a>
+        <h1>Hola <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"> Soy Renzo Robiño Tito Chura</h1>
+    </div>
 
-    <header>
-        <h1>M.Sc. Romel Percy Melgarejo Bolivar</h1>
-        <p>Ingeniero Estadístico e Informático | Especialista en TI, Ciencia de Datos y Docencia Universitaria</p>
-    </header>
-
-    <div class="container">
-        
-        <!-- SECCIÓN 1: RESUMEN EJECUTIVO -->
-        <section id="resumen">
-            <h2>📝 Resumen Profesional</h2>
-            <p>Profesional peruano de la ingeniería con competencias avanzadas en Ciencia de Datos, redes telemáticas, tecnologías Web y simulación de entornos tridimensionales. Sólido trasfondo en la investigación científica aplicada al ámbito de la salud y educación, respaldado por la dirección de proyectos y cargos de liderazgo institucional en la región Puno [CTI Vitae - CONCYTEC].</p>
-        </section>
-
-        <!-- SECCIÓN 2: FORMACIÓN ACADÉMICA Y IDIOMAS (DISEÑO EN CUADRÍCULA) -->
-        <div class="grid-2">
-            <section id="educacion">
-                <h2>🎓 Formación Superior</h2>
-                <ul>
-                    <li>
-                        <strong>Magíster Scientiae en Informática</strong><br>
-                        Mención en Gerencia de TIC — Universidad Nacional del Altiplano [CTI Vitae - CONCYTEC]
-                    </li>
-                    <li>
-                        <strong>Ingeniero Estadístico e Informático</strong><br>
-                        Título Profesional — Universidad Nacional del Altiplano [CTI Vitae - CONCYTEC]
-                    </li>
-                    <li>
-                        <strong>Bachiller en Ciencias Estadísticas e Informática</strong><br>
-                        Grado Académico — Universidad Nacional del Altiplano [CTI Vitae - CONCYTEC]
-                    </li>
-                    <li>
-                        <strong>Especialidad en Mecatrónica Automotriz</strong><br>
-                        Estudios Técnicos — I.S.T. José Antonio Encinas (Puno)
-                    </li>
-                </ul>
-            </section>
-
-            <section id="idiomas">
-                <h2>🌐 Competencias Lingüísticas</h2>
-                <ul>
-                    <li><strong>Quechua:</strong> Lengua Nativa (Nivel Avanzado)</li>
-                    <li><strong>Inglés:</strong> Nivel Intermedio (Lectura y Escritura)</li>
-                    <li><strong>Portugués:</strong> Nivel Intermedio (Certificado de Suficiencia)</li>
-                </ul>
-                <br>
-                <div style="text-align: center;">
-                    <a href="https://concytec.gob.pe" target="_blank" class="btn-verify">
-                        ✓ Verificar Perfil Oficial CONCYTEC
-                    </a>
-                </div>
-            </section>
+    <!-- Typing animation -->
+    <div style="text-align: center;">
+        <div class="typing-container">
+            <span class="typed-text" id="typed-text"></span>
         </div>
+    </div>
 
-        <!-- SECCIÓN 3: EXPERIENCIA INSTITUCIONAL -->
-        <section id="experiencia">
-            <h2>💼 Experiencia Laboral e Institucional</h2>
-            <ul>
-                <li>
-                    <strong>Presidente del Capítulo de Ingenieros Estadísticos e Informáticos</strong><br>
-                    Colegio de Ingenieros del Perú — Consejo Departamental Puno
-                    <br><span class="badge">Octubre 2022 - Actualidad</span>
-                </li>
-                <li>
-                    <strong>Docente Universitario Ordinario / Investigador</strong><br>
-                    Universidad Nacional del Altiplano Puno (UNA Puno)
-                    <br><span class="badge">2020 - Actualidad</span>
-                </li>
-                <li>
-                    <strong>Docente Auxiliar Ordinario</strong><br>
-                    Universidad Nacional de Moquegua (UNAM) [CTI Vitae - CONCYTEC]
-                </li>
-            </ul>
-        </section>
+    <div class="subhead">
+        📊 Estudiante de ING ESTADÍSTICA E INFORMÁTICA | 📍 Puno, Perú | ✉️ tchrenzo89@gmail.com
+    </div>
 
-        <!-- SECCIÓN 4: PROPIEDAD INTELECTUAL -->
-        <section id="propiedad-intelectual">
-            <h2>🛠️ Registro de Software y Patentes (INDECOPI)</h2>
-            <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 1rem;">Soluciones tecnológicas y sistemas con derechos de autor reconocidos por el Estado Peruano:</p>
-            <ul>
-                <li>
-                    <span class="project-title">Criptologin</span> — Módulo integrable de validación de usuarios mediante token USB DNI electrónico (Reg. 31152022) [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <span class="project-title">Enviromaker</span> — Software de procesamiento y generación de ambientes tridimensionales (Reg. 31132022) [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <span class="project-title">GLPAK GUI</span> — Interfaz gráfica para renderizado 3D en ventanas Win GDI+ (Reg. 31122022) [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <span class="project-title">Plataforma de Certificación Electrónica</span> — Desarrollo arquitectónico de software para emisión de firmas seguras (Reg. 1382017) [CTI Vitae - CONCYTEC].
-                </li>
-            </ul>
-        </section>
+    <!-- GIF y badges -->
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: space-between; margin: 2rem 0;">
+        <img src="https://octodex.github.com/images/daftpunktocat-guy.gif" alt="Coding" width="250" style="border-radius: 16px;">
+        <div>
+            <div class="badge-row">
+                <span class="badge">🔹 Repositorio: FINESI-UNA</span>
+                <span class="badge">📄 Archivos: 31</span>
+                <span class="badge">✅ Actualizado: Hoy</span>
+            </div>
+            <div>
+                <img src="https://github.com/0xAbdulKhalid/0xAbdulKhalid/raw/main/assets/mdImages/about_me.gif" width="40" style="vertical-align: middle;"> 
+                <strong style="font-size: 1.4rem;"> Sobre Mí</strong>
+                <ul style="margin-top: 0.5rem;">
+                    <li>🔭 <strong>Estudiante activo</strong> en ING ESTADÍSTICA E INFORMÁTICA - FINESI</li>
+                    <li>🌱 <strong>Formándome</strong> en R, Shiny, Python y métodos estadísticos computacionales</li>
+                    <li>💬 <strong>Apasionado</strong> por el análisis de datos, visualización y desarrollo de apps estadísticas</li>
+                    <li>📫 <strong>Contacto:</strong> tchrenzo89@gmail.com</li>
+                    <li>🎓 <strong>Universidad Nacional del Altiplano - Puno</strong></li>
+                    <li>⚡ <strong>Transformando datos en conocimiento para el desarrollo regional</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-        <!-- SECCIÓN 5: PRODUCCIÓN CIENTÍFICA -->
-        <section id="investigacion">
-            <h2>🔬 Producción Científica e Investigación</h2>
-            <ul>
-                <li>
-                    <strong>Capítulo de Libro (2023):</strong> "Predicción de diabetes en mujeres mediante un modelo probabilístico basado en Redes Bayesianas" en la publicación internacional <em>O Cuidado em Saúde Baseado em Evidências</em> [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <strong>Artículo de Revista (2022):</strong> "Arquitectura pervasiva con tecnologías WebRTC híbridas para el desarrollo de un framework Modelo Vista Controlador de tiempo real" [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <strong>Tesis de Postgrado (2021):</strong> "Redes privadas virtuales multimedia y su influencia en la seguridad de la información" — Universidad Nacional del Altiplano.
-                </li>
-            </ul>
-            
-            <!-- CONTENEDOR DE ENLACES DE VERIFICACIÓN -->
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- Contacto y redes -->
+    <h2 class="section-title"><img src="https://github.com/0xAbdulKhalid/0xAbdulKhalid/raw/main/assets/mdImages/handshake.gif" width="40"> Contacto y Redes</h2>
+    <div class="badge-row">
+        <a href="https://www.youtube.com/@renzotch" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
+        <a href="mailto:tchrenzo89@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+        <a href="https://github.com/renzotchss301-lgtm" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
+    </div>
+
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- Videos YouTube -->
+    <h2 class="section-title">🎥 VIDEOS DE YOUTUBE</h2>
+    <div class="table-wrapper">
+        <table>
+            <thead><tr><th>Video</th><th>Tema</th><th>Enlace</th></tr></thead>
+            <tbody>
+                <tr><td>Video 1</td><td>Introducción a la Estadística con R</td><td><a href="https://www.youtube.com/watch?v=OU7pnVggz0E" target="_blank">Ver en YouTube</a></td></tr>
+                <tr><td>Video 2</td><td>Desarrollo de Aplicaciones Shiny para principiantes</td><td><a href="https://www.youtube.com/watch?v=Sjq7-rmLS98" target="_blank">Ver en YouTube</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- Aplicaciones Shiny publicadas -->
+    <h2 class="section-title">📱 APLICACIONES SHINY PUBLICADAS</h2>
+    <div class="shiny-grid">
+        <a href="https://proyectosestcomputacionarenzortch.shinyapps.io/nowcastingepidemia/" class="shiny-btn" target="_blank">🔬 Nowcasting Epidemia</a>
+        <a href="https://proyectosestcomputacionarenzortch.shinyapps.io/proyect1/" class="shiny-btn" target="_blank">📈 Proyecto Estadística</a>
+        <a href="https://proyectosestcomputacionarenzortch.shinyapps.io/metaAnalisis/" class="shiny-btn" target="_blank">📊 Meta Análisis</a>
+        <a href="https://proyectosestcomputacionarenzot.shinyapps.io/boostrappaper/" class="shiny-btn" target="_blank">📋 Bootstrap Paper</a>
+    </div>
+
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- TRABAJOS ACADÉMICOS -->
+    <h2 class="section-title">📚 TRABAJOS ACADÉMICOS (FINESI)</h2>
+    <h3>📄 PAPERS Y REVISIONES SISTEMÁTICAS</h3>
+    <div class="table-wrapper">
+        <table>
+            <thead><tr><th>Archivo</th><th>Descripción</th><th>Enlace</th></tr></thead>
+            <tbody>
+                <tr><td>PAPER_SEGUNDA_UNIDAD_ESTADISTICA_COMPUTACIONAL.pdf</td><td>Investigación sobre métodos estadísticos aplicados</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/PAPER_SEGUNDA_UNIDAD_ESTADISTICA_COMPUTACIONAL.pdf" target="_blank">🔗 Ver PDF</a></td></tr>
+                <tr><td>Revision Sistematica Est. Comp. Renzo.pdf</td><td>Revisión sistemática de literatura especializada</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/Revision%20Sistematica%20Est.%20Comp.%20Renzo.pdf" target="_blank">🔗 Ver PDF</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>📖 MATERIALES DE ESTUDIO</h3>
+    <div class="table-wrapper">
+        <table>
+            <thead><tr><th>Archivo</th><th>Descripción</th><th>Enlace</th></tr></thead>
+            <tbody>
+                <tr><td>paper_introduccion.pdf</td><td>Introducción a la estadística computacional</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/paper_introduccion.pdf" target="_blank">🔗 Ver PDF</a></td></tr>
+                <tr><td>dDECOHEN.pdf</td><td>Estudio práctico de la d de Cohen</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/dDECOHEN.pdf" target="_blank">🔗 Ver PDF</a></td></tr>
+                <tr><td>DIAPOSITIVASexplicacionpaper.pdf</td><td>Presentación del paper académico</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/DIAPOSITIVASexplicacionpaper.pdf" target="_blank">🔗 Ver PDF</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- CÓDIGOS SHINY -->
+    <h2 class="section-title">💻 CÓDIGOS SHINY (Portafolio de Estudiante)</h2>
+    <div class="table-wrapper">
+        <table>
+            <thead><tr><th>Proyecto</th><th>Descripción</th><th>Enlace</th></tr></thead>
+            <tbody>
+                <tr><td>CODIGO SHINY PAPER UNIDAD II</td><td>Código fuente de aplicación Shiny para investigación</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/CODIGO%20SHINY%20PAPER%20UNIDAD%20II" target="_blank">🔗 Ver Código</a></td></tr>
+                <tr><td>Prueba Chi-cuadrado R shiny</td><td>App interactiva para pruebas estadísticas</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/Prueba%20Chi-cuadrado%20R%20shiny" target="_blank">🔗 Ver Código</a></td></tr>
+                <tr><td>Shiny Trabajo fin de unidad</td><td>Proyecto final integrador de la unidad</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/Shiny%20Trabajo%20fin%20de%20unidad" target="_blank">🔗 Ver Código</a></td></tr>
+                <tr><td>aplicacionshinyMetaAnalisis</td><td>Herramienta educativa para meta-análisis</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/aplicacionshinyMetaAnalisis" target="_blank">🔗 Ver Código</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- ANÁLISIS ESTADÍSTICOS -->
+    <h2 class="section-title">📊 ANÁLISIS ESTADÍSTICOS (Ejercicios)</h2>
+    <div class="table-wrapper">
+        <table>
+            <thead><tr><th>Proyecto</th><th>Descripción</th><th>Enlace</th></tr></thead>
+            <tbody>
+                <tr><td>Normalidad y Uniformidad en Criptografía</td><td>Análisis de propiedades estadísticas</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/Normalidad%20y%20Uniformidad%20en%20Criptograf%C4%B1a" target="_blank">🔗 Ver Archivo</a></td></tr>
+                <tr><td>Transformación Logarítmica Escalado y Normalización</td><td>Técnicas de preprocesamiento de datos</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/Transformacion%20Logar%C4%B1tmica%20Escalado%20y%20Normalizacion%20de%20Datos" target="_blank">🔗 Ver Archivo</a></td></tr>
+                <tr><td>Analisis de Uniformidad y Rendimiento con profvis</td><td>Optimización de código en R</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/Analisis%20de%20Uniformidad%20y%20Rendimiento%20con%20profvis" target="_blank">🔗 Ver Archivo</a></td></tr>
+                <tr><td>hipotesis de prueba test estadisticos</td><td>Pruebas de hipótesis aplicadas</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/hipotesis%20de%20prueba%20test%20estadisticos" target="_blank">🔗 Ver Archivo</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- DATOS METEOROLÓGICOS -->
+    <h2 class="section-title">🌧️ DATOS METEOROLÓGICOS (SENAMHI) - Proyecto Regional</h2>
+    <div class="table-wrapper">
+        <table>
+            <thead><tr><th>Archivo</th><th>Región</th><th>Enlace</th></tr></thead>
+            <tbody>
+                <tr><td>azangarodatasenamhi.xlsx</td><td>Azángaro</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/azangarodatasenamhi.xlsx" target="_blank">📥 Descargar Excel</a></td></tr>
+                <tr><td>desaguaderodatasenamhi.xlsx</td><td>Desaguadero</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/desaguaderodatasenamhi.xlsx" target="_blank">📥 Descargar Excel</a></td></tr>
+                <tr><td>ilavedatasenamhi.xlsx</td><td>Ilave</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/ilavedatasenamhi.xlsx" target="_blank">📥 Descargar Excel</a></td></tr>
+                <tr><td>julidatasenamhi.xlsx</td><td>Juli</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/julidatasenamhi.xlsx" target="_blank">📥 Descargar Excel</a></td></tr>
+                <tr><td>punodatasenamhi.xlsx</td><td>Puno</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/punodatasenamhi.xlsx" target="_blank">📥 Descargar Excel</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- OTROS DATOS Y RECURSOS -->
+    <h2 class="section-title">📁 OTROS DATOS Y RECURSOS</h2>
+    <div class="table-wrapper">
+        <table>
+            <thead><tr><th>Archivo</th><th>Descripción</th><th>Enlace</th></tr></thead>
+            <tbody>
+                <tr><td>datos_digitales_europa.csv</td><td>Datos digitales de países europeos</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/datos_digitales_europa.csv" target="_blank">📥 Descargar CSV</a></td></tr>
+                <tr><td>datos_geograficos_puno_actualizado.csv</td><td>Información geográfica de Puno</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/datos_geograficos_puno_actualizado.csv" target="_blank">📥 Descargar CSV</a></td></tr>
+                <tr><td>datos_sinteticos_puno_2025_actualizado.csv</td><td>Proyecciones para 2025</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/datos_sinteticos_puno_2025_actualizado.csv" target="_blank">📥 Descargar CSV</a></td></tr>
+                <tr><td>MetaAnalisis20articulos.xlsx</td><td>Base de datos para meta-análisis</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/MetaAnalisis20articulos.xlsx" target="_blank">📥 Descargar Excel</a></td></tr>
+                <tr><td>caramelos y chupetines</td><td>Ejercicio con datos reales</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/caramelos%20y%20chupetines" target="_blank">🔗 Ver Archivo</a></td></tr>
+                <tr><td>completarcodigoR</td><td>Ejercicios y ejemplos en R</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/completarcodigoR" target="_blank">🔗 Ver Archivo</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- MANUALES Y GUÍAS -->
+    <h2 class="section-title">📖 MANUALES Y GUÍAS</h2>
+    <div class="table-wrapper">
+        <table>
+            <thead><tr><th>Archivo</th><th>Descripción</th><th>Enlace</th></tr></thead>
+            <tbody>
+                <tr><td>GUIA EASYSTATS.pdf</td><td>Guía básica de EasyStats en R</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/GUIA%20EASYSTATS.pdf" target="_blank">📥 Descargar PDF</a></td></tr>
+                <tr><td>MANUAL Easy Stats en R</td><td>Manual introductorio de estadística con R</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/MANUAL%20Easy%20Stats%20en%20R" target="_blank">📥 Descargar PDF</a></td></tr>
+                <tr><td>INTERVALOS DE CONFIANZAejercicios.pdf</td><td>Ejercicios prácticos de intervalos</td><td><a href="https://github.com/renzotchss301-lgtm/ESTADISTICA-COMPUTACIONAL/blob/main/INTERVALOS%20DE%20CONFIANZAejercicios.pdf" target="_blank">📥 Descargar PDF</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- Habilidades -->
+    <h2 class="section-title"><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="30"> Habilidades en Desarrollo</h2>
+    <div class="skills">
+        <span class="skill-tag">📈 R</span> <span class="skill-tag">⚡ Shiny</span> <span class="skill-tag">📊 Estadística Aplicada</span>
+        <span class="skill-tag">🔍 Meta-Análisis</span> <span class="skill-tag">🛠 RStudio</span> <span class="skill-tag">🐙 Git/GitHub</span>
+        <span class="skill-tag">📊 Pruebas de Hipótesis</span> <span class="skill-tag">📈 Intervalos Confianza</span> <span class="skill-tag">🧪 Análisis Uniformidad</span>
+    </div>
+
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- Áreas de interés -->
+    <h2 class="section-title">🎯 Áreas de Interés</h2>
+    <ul>
+        <li>📊 Estadística aplicada a problemas regionales del altiplano</li>
+        <li>🤖 Desarrollo de aplicaciones Shiny para análisis de datos</li>
+        <li>🔍 Meta-análisis y revisión sistemática de literatura</li>
+        <li>📚 Aprendizaje de la estadística mediante programación con R</li>
+        <li>🌡️ Análisis de datos climáticos de la región Puno</li>
+        <li>🏔️ Geoestadística aplicada al altiplano</li>
+    </ul>
+
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- Avances -->
+    <h2 class="section-title">🏆 Avances como Estudiante</h2>
+    <ul>
+        <li>✅ Publicación de 4 aplicaciones Shiny como proyectos de aprendizaje</li>
+        <li>✅ Recopilación y análisis de datos meteorológicos de 5 provincias</li>
+        <li>✅ Elaboración de paper académico sobre estadística computacional</li>
+        <li>✅ Desarrollo de una revisión sistemática especializada</li>
+        <li>✅ Creación de manuales y guías de estudio personales</li>
+    </ul>
+
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- Actividad reciente -->
+    <h2 class="section-title">📅 Actividad Reciente</h2>
+    <ul>
+        <li><strong>Hoy</strong>: Actualización de GUIA EASYSTATS.pdf y dDECOHEN.pdf</li>
+        <li><strong>Última semana</strong>: Análisis de datos SENAMHI de 5 provincias</li>
+        <li><strong>Último mes</strong>: Finalización de paper y revisión sistemática</li>
+        <li><strong>Constante</strong>: Mantenimiento y mejora de aplicaciones Shiny publicadas</li>
+    </ul>
+
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- Cita -->
+    <div style="text-align: center; font-style: italic; margin: 2rem 0;">
+        <p>✨ <strong>"El estudiante no es un recipiente por llenar, sino una antorcha por encender."</strong> ✨</p>
+        <img src="https://media.giphy.com/media/jpVnC65DmYeyRL4LHS/giphy.gif" width="120">
+    </div>
+
+    <div class="divider"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%"></div>
+
+    <!-- Footer -->
+    <footer>
+        <h3>📞 Información de Contacto</h3>
+        <p>✉️ Correo: tchrenzo89@gmail.com<br>
+        🏫 Universidad Nacional del Altiplano - Puno<br>
+        📍 Ubicación: Puno, Perú<br>
+        🎓 Facultad: FINESI - Ingeniería Estadística e Informática</p>
+        <p><em>"Aprendiendo y compartiendo conocimiento estadístico para el desarrollo del altiplano"</em></p>
+        <p>© 2025 Renzo Robiño Tito Chura - Estudiante FINESI</p>
+    </footer>
+</div>
+
+<!-- Typing animation script -->
+<script>
+    const phrases = [
+        "Estudiante de ING ESTADÍSTICA",
+        "Estudiante de ING INFORMÁTICA",
+        "FINESI - UNA PUNO",
+        "Apasionado por los Datos y la Tecnología"
+    ];
+    let i = 0;
+    let j = 0;
+    let currentPhrase = [];
+    let isDeleting = false;
+    let isEnd = false;
+
+    function loop() {
+        isEnd = false;
+        const typedTextElement = document.getElementById("typed-text");
+
+        if (i < phrases.length) {
+            if (!isDeleting && j <= phrases[i].length) {
+                currentPhrase.push(phrases[i][j]);
+                j++;
+                typedTextElement.innerHTML = currentPhrase.join("");
+            }
+
+            if (isDeleting && j <= phrases[i].length) {
+                currentPhrase.pop();
+                j--;
+                typedTextElement.innerHTML = currentPhrase.join("");
+            }
+
+            if (j == phrases[i].length) {
+                isEnd = true;
+                isDeleting = true;
+            }
+
+            if (isDeleting && j === 0) {
+                currentPhrase = [];
+                isDeleting = false;
+                i++;
+                if (i === phrases.length) {
+                    i = 0;
+                }
+            }
+        }
+        const spedUp = Math.random() * (80 - 50) + 50;
+        const normalSpeed = Math.random() * (150 - 100) + 100;
+        const time = isEnd ? 2000 : (isDeleting ? spedUp : normalSpeed);
+        setTimeout(loop, time);
+    }
+    loop();
+</script>
+</body>
+</html>
