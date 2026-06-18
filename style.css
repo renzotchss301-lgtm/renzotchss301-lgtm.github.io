@@ -1,0 +1,493 @@
+/* ========== PORTFOLIO RENZO TITO CHURA — TEMA OSCURO v2 ========== */
+
+/* ---- Reset y base ---- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #07100b;
+    color: #d4e8d4;
+    line-height: 1.65;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+}
+
+/* ---- Contenedor principal ---- */
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    background: #101a12;
+    border-radius: 32px;
+    box-shadow:
+        0 0 0 1px #1e3a22,
+        0 30px 60px -12px rgba(0,0,0,0.7);
+    overflow: hidden;
+    padding: 2.5rem 2rem;
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+/* ---- Header / Banner ---- */
+.header-banner {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header-banner img {
+    max-width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease, filter 0.3s;
+}
+.header-banner img:hover {
+    transform: scale(1.015);
+    filter: brightness(1.06) contrast(1.04);
+}
+
+/* ---- Título principal ---- */
+h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #5bbf3c, #a5d6a5, #6fbf8c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0.9rem 0 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+/* ---- Typing animation ---- */
+.typing-container {
+    background: rgba(40, 70, 40, 0.35);
+    padding: 0.65rem 1.8rem;
+    border-radius: 60px;
+    display: inline-block;
+    margin: 0.6rem 0 1.2rem;
+    border: 1px solid #4a9a4a;
+    box-shadow: 0 2px 12px rgba(74, 154, 74, 0.25);
+}
+
+.typed-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #a8dca8;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.typed-text::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 3px;
+    color: #6fbf4c;
+    font-weight: 900;
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ---- Subhead ---- */
+.subhead {
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: rgba(20, 35, 22, 0.8);
+    backdrop-filter: blur(4px);
+    padding: 0.85rem 1.5rem;
+    border-radius: 60px;
+    margin: 1rem auto;
+    max-width: 700px;
+    border: 1px solid #2e4e2e;
+    color: #c2d8c2;
+    letter-spacing: 0.01em;
+}
+
+/* ---- Badge row ---- */
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.badge {
+    background: #182418;
+    padding: 0.35rem 1.1rem;
+    border-radius: 40px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #b2d8b2;
+    border: 1px solid #2e4e2e;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
+}
+
+.badge:hover {
+    background: #253525;
+    border-color: #4a8a4a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ---- Títulos de sección ---- */
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 2.5rem 0 1.2rem;
+    padding-left: 1.2rem;
+    border-left: 5px solid #5bbf3c;
+    color: #b8deb8;
+    letter-spacing: -0.3px;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #8aba8a;
+    margin: 1.5rem 0 0.6rem;
+    padding-left: 0.4rem;
+    border-left: 3px solid #3a7a3a;
+}
+
+/* ---- Divisores ---- */
+.divider {
+    margin: 2.5rem 0;
+    text-align: center;
+    opacity: 0.45;
+}
+
+.divider img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---- Tablas ---- */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 1.2rem 0 1.8rem;
+    border-radius: 18px;
+    border: 1px solid #1e3a22;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0f1a10;
+}
+
+th, td {
+    padding: 13px 16px;
+    border-bottom: 1px solid #1e3a22;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+th {
+    background: #152015;
+    font-weight: 700;
+    color: #a8d8a8;
+    border-bottom: 2px solid #2e5e2e;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+tbody tr {
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+tbody tr:hover {
+    background: #172817;
+    box-shadow: inset 0 0 0 1px #2a4a2a;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ---- Enlaces ---- */
+a {
+    color: #72c472;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #a8e0a8;
+    text-decoration: underline;
+}
+
+/* ---- Botones Shiny ---- */
+.shiny-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.shiny-btn {
+    background: linear-gradient(135deg, #122218, #1a3020);
+    padding: 0.65rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    color: #d0f0d0;
+    border: 1px solid #2e5e2e;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    display: inline-block;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.shiny-btn:hover {
+    background: linear-gradient(135deg, #1a3020, #265c26);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 14px 24px -10px rgba(0,0,0,0.6), 0 0 0 1px #3a7a3a;
+    text-decoration: none;
+    color: #e8f8e8;
+}
+
+/* ---- Skills / habilidades ---- */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1rem 0;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.skill-tag {
+    background: #131f14;
+    padding: 0.35rem 1.1rem;
+    border-radius: 30px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #b0d8b0;
+    border-left: 3px solid #5bbf3c;
+    border: 1px solid #1e3a1e;
+    border-left: 3px solid #5bbf3c;
+    transition: all 0.2s;
+}
+
+.skill-tag:hover {
+    background: #1a2e1a;
+    transform: translateY(-1px);
+}
+
+/* ---- Tarjetas de interés (nueva sección) ---- */
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1.2rem 0;
+}
+
+.interest-card {
+    background: #0f1a10;
+    border: 1px solid #1e3a22;
+    border-radius: 18px;
+    padding: 1.2rem 1.4rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.interest-card:hover {
+    border-color: #3a7a3a;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -8px rgba(0,0,0,0.5);
+}
+
+.interest-card .icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.interest-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #a8d8a8;
+    margin-bottom: 0.4rem;
+}
+
+.interest-card p {
+    font-size: 0.83rem;
+    color: #88aa88;
+    line-height: 1.5;
+}
+
+/* ---- Barra de idioma (inglés) ---- */
+.lang-card {
+    background: #0f1a10;
+    border: 1px solid #1e3a22;
+    border-radius: 18px;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.lang-flag {
+    font-size: 2.2rem;
+}
+
+.lang-info {
+    flex: 1;
+    min-width: 180px;
+}
+
+.lang-info strong {
+    display: block;
+    font-size: 1rem;
+    color: #a8d8a8;
+    margin-bottom: 0.3rem;
+}
+
+.lang-info span {
+    font-size: 0.82rem;
+    color: #6a9a6a;
+}
+
+.lang-bar {
+    flex: 2;
+    min-width: 200px;
+}
+
+.lang-bar-track {
+    background: #1a2e1a;
+    border-radius: 20px;
+    height: 10px;
+    overflow: hidden;
+    margin-bottom: 0.3rem;
+    border: 1px solid #2e4e2e;
+}
+
+.lang-bar-fill {
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #3a7a3a, #6fbf4c);
+    animation: growBar 1.2s ease-out both;
+}
+
+@keyframes growBar {
+    from { width: 0; }
+}
+
+.lang-bar small {
+    font-size: 0.75rem;
+    color: #6a9a6a;
+}
+
+/* ---- Listas ---- */
+ul {
+    list-style: none;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+li {
+    margin-bottom: 0.65rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #c0dcc0;
+    font-size: 0.93rem;
+}
+
+li::before {
+    content: "🌿";
+    position: absolute;
+    left: 0;
+    font-size: 0.85rem;
+}
+
+/* ---- Cita ---- */
+.quote-block {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 680px;
+    background: #0c180c;
+    border: 1px solid #2a4a2a;
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    font-style: italic;
+    color: #8aba8a;
+    font-size: 1.05rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+}
+
+.quote-block strong {
+    color: #a8d8a8;
+}
+
+/* ---- Footer ---- */
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem 1.5rem;
+    border-top: 2px dashed #1e3a22;
+    color: #7aaa7a;
+    background: #080e08;
+    border-radius: 24px;
+    font-size: 0.9rem;
+    animation: fadeInUp 0.6s ease-out both;
+    animation-delay: 0.7s;
+}
+
+footer h3 {
+    font-size: 1.2rem;
+    color: #a0c8a0;
+    margin-bottom: 0.75rem;
+    border: none;
+    padding: 0;
+}
+
+footer p {
+    margin: 0.4rem 0;
+    line-height: 1.7;
+}
+
+footer a {
+    color: #72c472;
+}
+
+/* ---- Animaciones ---- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.section-title { animation-delay: 0.05s; }
+.table-wrapper:nth-of-type(1) { animation-delay: 0.1s; }
+.table-wrapper:nth-of-type(2) { animation-delay: 0.18s; }
+.table-wrapper:nth-of-type(3) { animation-delay: 0.26s; }
+.shiny-grid  { animation-delay: 0.3s; }
+.skills      { animation-delay: 0.35s; }
+ul           { animation-delay: 0.4s; }
+footer       { animation-delay: 0.5s; }
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    body { padding: 1rem 0.5rem; }
+
+    .container { padding: 1.2rem; border-radius: 22px; }
+
+    h1 { font-size: 1.75rem; }
+    .typed-text { font-size: 1.1rem; }
+    .section-title { font-size: 1.35rem; }
+
+    .interest-grid { grid-template-columns: 1fr; }
+
+    .lang-card { flex-direction: column; align-items: flex-start; }
+}
